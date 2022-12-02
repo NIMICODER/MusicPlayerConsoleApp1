@@ -10,6 +10,7 @@ namespace MusicPlayerConsoleApp1
     public class PlaylistDashboard
     {
         private readonly PlaylistMenuUtility _editplaylist;
+        public PlaylistDashboard() {}
         public PlaylistDashboard(PlaylistMenuUtility _editPlaylist)
         {
             this._editplaylist = _editPlaylist;  

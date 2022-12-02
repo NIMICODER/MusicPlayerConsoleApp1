@@ -13,8 +13,9 @@ namespace MusicPlayerConsoleApp1
         StringBuilder mainMenuBuilder = new StringBuilder();
         private readonly MusicPlayer _musicPlayer;
         private readonly Playlist _playlist;
-        private readonly PlaylistDashboard _playlistDashboard;  
-
+        PlaylistMenuUtility menuUtility = new PlaylistMenuUtility();
+        PlaylistDashboard _playlistDashboard = new();  
+        
         public Application()
         {
 
@@ -79,8 +80,8 @@ namespace MusicPlayerConsoleApp1
         void DisplayMainMenu()
         {
             mainMenuBuilder.AppendLine($"Welcome to {_musicPlayer.AppName}. Choose an option");
-            mainMenuBuilder.AppendLine("1. Show all Music");
-            mainMenuBuilder.AppendLine("2. Playlist Maker");
+            mainMenuBuilder.AppendLine("1. Display all Songs");
+            mainMenuBuilder.AppendLine("2. Playlist Dashboard");
             mainMenuBuilder.AppendLine("3. Shuffle");
             mainMenuBuilder.AppendLine("4. Quit");
 

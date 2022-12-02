@@ -37,6 +37,19 @@ namespace MusicPlayerConsoleApp1
            
         }
 
+        public List<Music> PlaySync() 
+        {
+        //start: _count = 0;
+            var Songs = AllSongs();
+            Songs.Sort();
+            foreach (var song in Songs)
+            {
+                Console.WriteLine(song);
+            }
+
+            return MusicList; 
+        }
+
         public void AddSongData()
         {
             MusicList.Clear();
